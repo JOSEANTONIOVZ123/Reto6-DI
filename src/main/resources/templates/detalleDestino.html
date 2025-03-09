@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalles del Destino</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+<h1 th:text="${destino.nombre}"></h1>
+<p th:text="${destino.descripcion}"></p>
+<p><strong>País:</strong> <span th:text="${destino.pais}"></span></p>
+<a href="/destinos">Volver</a>
+<a th:href="@{/destinos/eliminar/{id}(id=${destino.id})}" onclick="return confirm('¿Seguro que quieres eliminar este destino?');">
+    <button style="background-color: red; color: white;">Eliminar</button>
+</a>
+</body>
+</html>

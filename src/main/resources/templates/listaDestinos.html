@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Destinos</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+<h1>Lista de Destinos Turísticos</h1>
+<a href="/destinos/nuevo">
+    <button>Agregar Destino</button>
+</a>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>País</th>
+        <th>Acción</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="destino : ${destinos}">
+        <td th:text="${destino.nombre}"></td>
+        <td th:text="${destino.pais}"></td>
+        <td>
+            <a th:href="@{/destinos/{id}(id=${destino.id})}">Ver más</a>
+
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

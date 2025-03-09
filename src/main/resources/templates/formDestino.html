@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nuevo Destino</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+<h1>Agregar Nuevo Destino</h1>
+<form action="/destinos/guardar" method="post">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required />
+    <br/>
+
+    <label>Descripción:</label>
+    <textarea name="descripcion" required></textarea>
+    <br/>
+
+    <label>País:</label>
+    <input type="text" name="pais" required />
+    <br/>
+
+    <button type="submit">Guardar</button>
+</form>
+<a href="/destinos">Volver al listado</a>
+</body>
+</html>
